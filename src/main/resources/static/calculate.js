@@ -1,13 +1,12 @@
 var grades=[];
 grades.sort(asc);
 
-console.log(grades);
-gradeOutput();
-
+// stores the bounds limit values 
 var bounds = document.getElementsByName('bound');
+// stores the output elements in table 2
 var output = document.getElementsByClassName('output');
 
-
+//event listener for new grade form, clears output and outputs grade array again
 document.getElementById('new-grade').addEventListener('submit', function(event)
 {
     event.preventDefault();
@@ -16,7 +15,7 @@ document.getElementById('new-grade').addEventListener('submit', function(event)
     gradeOutput();
 })
 
-
+// event listener for the bound forms, dynamically change grade output
 for (var i=0; i < bounds.length; i++)
 {
     bounds[i].addEventListener("keyup", function(event){
@@ -32,7 +31,7 @@ for (var i=0; i < bounds.length; i++)
 }
 
 
-
+// function to output grade array to table 2 elements
 function gradeOutput()
 {
 for (var i = 0; i < grades.length; i++ )
@@ -108,17 +107,18 @@ for (var i = 0; i < grades.length; i++ )
     }
  }
 }
-
+// compare function for array sort to sort in ascending order
 function asc(a,b)
 {
     return a-b
 }
-
+// gets value from bound form
 function getBound(id) {
     var bound = document.getElementById(id).elements[0];
     return bound.value;
 }
-
+// event handler for bound changes, dynamically adjust output based on bound changes and keypress
+// handles errors and edge cases
 function boundchange(event)
 {
 
@@ -146,7 +146,7 @@ function boundchange(event)
         gradeOutput();
     }
 }
-
+// clears the output elements in table 2
 function outputClear(output)
 {
     for (var i=0; i < output.length; i++)
@@ -154,7 +154,7 @@ function outputClear(output)
     output[i].textContent = '';
 }
 }
-
+// checks the bound limit order to ensure no overlapping takes place
 function boundOrder(bounds)
 {
 
@@ -170,7 +170,7 @@ function boundOrder(bounds)
 }
     return true;
 }
-
+// checks the maximal and minimal bound limits encompasses the entire grade range
 function boundRange(bounds)
 {
     if (Number(bounds[0].elements[0].value) < grades[grades.length-1])
@@ -185,7 +185,7 @@ function boundRange(bounds)
 
     return true;
 }
-
+// pushs the value from new-grade form into the array and sorts it
 function addGrade()
 {
     grades.push(Number(document.getElementById('new-grade').elements[0].value));
