@@ -11,8 +11,7 @@ document.getElementById('new-grade').addEventListener('submit', function(event)
 {
     event.preventDefault();
     addGrade();
-    outputClear(output);
-    gradeOutput();
+    boundchange(event);
 })
 
 // event listener for the bound forms, dynamically change grade output
