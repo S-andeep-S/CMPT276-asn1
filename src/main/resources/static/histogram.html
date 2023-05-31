@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="histogram.css">
+    
+</head>
+<body>
+
+    <div class="grid-container">
+        <h1>Histogram Generator</h1>
+        <div class="grid-item" id="table-1">
+            <table>
+                <tr>
+                    <th colspan="2">Lower Bounds</th>
+                </tr>
+                <tr>
+                    <td>Max</td> 
+
+                    <td><form action="calculate.js" id="max" name="bound">
+                        <input type="number" value = 100.00>
+                    </form></td>
+                </tr>
+                <tr>
+                    <td>A+</td> 
+                    <td>
+                        <form action="calculate.js" id="a+" name="bound">
+                            <input type="number" value = 95.00>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>A</td> 
+                    <td>
+                        <form action="calculate.js" id="a" name="bound">
+                            <input type="number" value = 90.00>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>A-</td> 
+                    <td>
+                        <form action="calculate.js" id="a-" name="bound">
+                            <input type="number" value = 85.00>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>B+</td> 
+                    <td>
+                        <form action="calculate.js" id="b+" name="bound">
+                            <input type="number" value = 80.00>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>B</td> 
+                    <td>
+                        <form action="calculate.js" id="b" name="bound">
+                            <input type="number" value = 75.00>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>B-</td> 
+                    <td>
+                        <form action="calculate.js" id="b-" name="bound">
+                            <input type="number" value = 70.00>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>C+</td> 
+                    <td>
+                        <form action="calculate.js" id="c+" name="bound">
+                            <input type="number" value = 65.00>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>C</td> 
+                    <td>
+                        <form action="calculate.js" id="c" name="bound">
+                            <input type="number" value=60.00>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>C-</td> 
+                    <td>
+                        <form action="calculate.js" id="c-" name="bound">
+                            <input type="number", value=55.00>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>D</td> 
+                    <td>
+                        <form action="calculate.js" id="d" name="bound">
+                            <input type="number", value=50.00>
+                        </form>
+                    </td>
+                </tr>
+                <tr>
+                    <td>F</td> 
+                    <td>
+                        <form action="calculate.js" id="f" name="bound">
+                            <input type="number" value=0.00>
+                        </form>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="grid-item" id="table-2">
+            <table>
+                <tr>
+                    <th>Historgram</th>
+                </tr>
+                <tr>
+                    <td>A+</td> <td id="a+.show" class="output"></td>
+                </tr>
+                <tr>
+                    <td>A</td> <td id="a.show" class="output"></td>
+                </tr>
+                <tr>
+                    <td>A-</td> <td id="a-.show" class="output"></td>
+                </tr>
+                <tr>
+                    <td>B+</td> <td id="b+.show" class="output"></td>
+                </tr>
+                <tr>
+                    <td>B</td> <td id="b.show" class="output"></td>
+                </tr>
+                <tr>
+                    <td>B-</td> <td id="b-.show" class="output"></td>
+                </tr>
+                <tr>
+                    <td>C+</td> <td id="c+.show" class="output"></td>
+                </tr>
+                <tr>
+                    <td>C</td> <td id="c.show" class="output"></td>
+                </tr>
+                <tr>
+                    <td>C-</td> <td id="c-.show" class="output"></td>
+                </tr>
+                <tr>
+                    <td>D</td> <td id="d.show" class="output"></td>
+                </tr>
+                <tr>
+                    <td>F</td> <td id="f.show" class="output"></td>
+                </tr>
+            </table>
+        </div>
+        <div class="grid-item" id="table-3">
+            <table>
+                <tr>
+                <td>New Grade:</td> 
+                <td>
+                    <form action="calculate.js" id="new-grade">
+                        <input type="number">
+                    </form>
+                </td>
+                </tr>
+            </table>
+        </div>
+        
+
+
+
+    </div>
+
+    <p id="messageOutput1"></p> <br>
+    <p id="messageOutput2"></p>
+
+
+
+
+    <script src="calculate.js"></script> 
+    
+</body>
+</html>
